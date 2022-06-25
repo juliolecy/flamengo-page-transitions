@@ -1,24 +1,33 @@
-import logo from './logo.svg';
 import './App.css';
+import {BrowserRouter, Switch, Route} from 'react-router-dom'
+import Raça from './pages/Raça'
+import Amor from './pages/Amor'
+import Paixao from './pages/Paixão'
+import {AnimatePresence} from 'framer-motion'
+import GlobalStyle from './globalStyles'
+import React from 'react'
+import styled from 'styled-components'
+
+const Section = styled.section`
+overflow-x:hidden;
+`
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Section>
+    <BrowserRouter>
+      <React.StrictMode>
+    <AnimatePresence exitBeforeEnter>
+    <GlobalStyle/>
+    <Switch >
+    <Route path='/' exact component={Raça} />
+    <Route path='/amor' component={Amor} />
+    <Route path='/paixao' component={Paixao} /> 
+    </Switch>
+  </AnimatePresence>
+  </React.StrictMode> 
+  </BrowserRouter>
+  </Section>
   );
 }
 
