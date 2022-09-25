@@ -21,7 +21,7 @@
 <div  align="center">
 
   <a>
-    <img src="https://skillicons.dev/icons?i=react,js,html,css" />
+    <img src="https://skillicons.dev/icons?i=react,js,html,css,styledcomponents" />
   </a>
   
   ##
